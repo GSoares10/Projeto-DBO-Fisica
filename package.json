@@ -1,0 +1,19 @@
+{
+  "name": "dbo-2018-workspace",
+  "version": "1.0.0",
+  "description": "Workspace com o ambiente node necessário para o Desenvolvimento Web",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha",
+    "start": "live-server --ignore='**/node_modules/*'"
+  },
+  "keywords": [],
+  "author": "Prof. Márcio Torres",
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "^4.13.1",
+    "eslint-config-google": "^0.9.1",
+    "live-server": "^1.2.0",
+    "mocha": "^5.1.1"
+  }
+}
