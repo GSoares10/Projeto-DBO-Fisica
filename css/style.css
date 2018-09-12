@@ -90,16 +90,18 @@ button:hover {
     color: white;
 }
 
-footer {
+.footer-style {
+    display: flex;
+    flex-direction: column;
     clear: both;
     height: 60px;
     background-color: #333;
     color: rgb(225, 225, 225);
     overflow: hidden;
-    position:absolute;
     bottom:0;
     width:100%;
 }
+
 
 footer div.footer-left img {
     margin: 10px;
