@@ -34,63 +34,33 @@ html, body {
     color: black;
 }
 
-div.contents > * {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-}
-
-div.contents > * {
+div.main-text > * {
+    font-size: 1em;
+    display: block;
+    flex-direction: center;
     padding: 10px;
 }
 
-div.contents-simulator > article {
-    justify-content: space-between;
-    text-align: justify;
-}
-
-
-h1{
-    position: center;
-    font-size: 2.2em;
-    font-weight: bold;
-    margin-bottom: 1em;
-}
-
- h2 {
-    position: center;
-    font-size: 1.2em;
-    font-weight: bold;
-    margin-bottom: 1em;
-}
-
-button {
-    background-color: #333;;
-    border: none;
-    color: white;
-    padding: 16px 32px;
+h1 {
     text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    -webkit-transition-duration: 0.4s; /* Safari */
-    transition-duration: 0.4s;
-    cursor: pointer;
+    margin: 15px;
+    font-size: 2em;
+    font-weight: bold;
 }
 
-button {
-    background-color: white; 
-    color: black; 
-    border: 2px solid #333;
+article > * {
+    margin: 1em;
 }
 
-button:hover {
-    background-color: #333;
-    color: white;
+.first-p > article > * {
+    direction: flex;
+    justify-content: justify;
+    line-height: 2em;
+    padding: 5px;
 }
 
 .footer-style {
+    margin-top: 10px;
     bottom: 0%;
     position: fixed;
     display: flex;
