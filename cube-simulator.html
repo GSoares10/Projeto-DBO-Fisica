@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+          <meta charset="UTF-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <meta http-equiv="X-UA-Compatible" content="ie=edge">
+          <title>Simulador de Gravidade</title>
+          <link rel="stylesheet" href="css/cube-simulator.css">
+</head>
+<body>
+    <div class="flex-container">
+        <div class="layout-fixed-header">
+            <header class="layout-header">
+                <div class="layout-tab-bar">
+                    <a href="home.html" class="layout-tab">Home</a>
+                    <a href="project.html" class="layout-tab">Projeto</a>
+                    <div class="layout-github">
+                        <a target="_blank" href="https://github.com/GSoares10/Projeto-DBO-Fisica">
+                            <i class="fab fa-github">
+                            <img src="photos/GitHub-Mark-32px.png" alt="">
+                            </i>
+                        </a>
+                    </div>
+                </div>
+            </header>
+        </div>
+    </div>
+
+    <div class="align-input">
+        <label for="">Insira a gravidade desejada:</label>
+        <input class="g" type="text" placeholder="m/s²">
+        <button>Add</button>
+        <label for="">Insira a altura desejada:</label>
+        <input class="h" type="text" placeholder="m">
+        <button>Add</button>
+    </div>
+
+    <div class="align-dropdown">
+        <div class="dropdown">
+            <button class="dropbtn">Lista de Gravidades</button>
+            <div class="dropdown-content">
+                <a href="#">Sol - 274,13 m/s²</a>
+                <a href="#">Mercúrio - 3,7 m/s²</a>
+                <a href="#">Vênus - 8,87 m/s²</a>
+                <a href="#">Terra - 9,80 m/s²</a>
+                <a href="#">Marte - 3,711 m/s²</a>
+                <a href="#">Júpiter - 24,79 m/s²</a>
+                <a href="#">Saturno - 10,44 m/s²</a>
+                <a href="#">Netuno - 11,15 m/s²</a>
+            </div>
+        </div>
+        </div>
+
+    <div class="contents">
+        <div class="contents-title">
+            <h1>Simulador de MQL</h1>
+        </div>
+        <div class="align-canvas">
+        </div>
+    </div>
+
+    <div class="footer-style">
+        <footer>
+            <div class="footer-left">
+                <img src="http://via.placeholder.com/40x40" alt="logo ifrs">
+                <span>
+                    Instituto Federal de Educação,
+                    Ciência e Tecnologia do
+                    Rio Grande do Sul
+                </span>
+            </div>
+    
+            <div class="footer-right">
+                <img src="http://via.placeholder.com/40x40" alt="logo dc">
+                <span>Departamento de Ensino de Computação</span>
+            </div>
+                    
+        </footer>
+    </div>
+
+    <script src="js/cube-simulator.js"></script>
+    <script src="js/dropdown.js"></script>
+          
+</body>
+</html>

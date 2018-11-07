@@ -1,0 +1,32 @@
+{
+    "parserOptions": {
+        "ecmaVersion": 6,
+        "sourceType": "module"
+    },
+    "env": {
+        "browser": true,
+        "es6": true,
+        "commonjs": true,
+        "mocha": true
+    },
+    "extends": [
+        "eslint:recommended",
+        "google"
+    ],
+    "rules": {
+        "indent": ["error", 4],
+        "no-alert": "error",
+        "prefer-const": "error",
+        "eqeqeq": "error",
+        "camelcase": "error",
+        "max-lines": ["warn", 100],
+        "max-depth": ["warn", 4],
+        "max-nested-callbacks": ["warn", 4],
+        "max-params": ["warn", 4],
+        "max-statements": ["warn", 20],
+        "no-magic-numbers": ["warn", {"ignoreArrayIndexes": true, "ignore": [-1, 0, 1]}],
+        "require-jsdoc": "off",
+        "no-console": "off",
+        "comma-dangle": "off"
+    }
+}
