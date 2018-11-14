@@ -25,15 +25,16 @@
             </header>
         </div>
     </div>
+    <form class="formNumero">
+        <div class="align-input">
+            <label for="">Insira a gravidade desejada:</label>
+            <input class="gravidade" type="number" placeholder="m/s²" required>
 
-    <div class="align-input">
-        <label for="">Insira a gravidade desejada:</label>
-        <input class="g" type="text" placeholder="m/s²">
-        <button>Add</button>
-        <label for="">Insira a altura desejada:</label>
-        <input class="h" type="text" placeholder="m">
-        <button>Add</button>
-    </div>
+            <label for="">Insira a altura desejada:</label>
+            <input class="altura0" type="number" placeholder="m" required>
+            <input type="submit" class="style-input" value="Add">
+        </div>
+    </form>
 
     <div class="align-dropdown">
         <div class="dropdown">
@@ -49,7 +50,12 @@
                 <a href="#">Netuno - 11,15 m/s²</a>
             </div>
         </div>
-        </div>
+    </div>
+
+
+    <div class="result">
+
+    </div>
 
     <div class="contents">
         <div class="contents-title">
@@ -78,8 +84,7 @@
         </footer>
     </div>
 
-    <script src="js/cube-simulator.js"></script>
-    <script src="js/dropdown.js"></script>
+    <script src="js/mql.js"></script>
           
 </body>
 </html>
