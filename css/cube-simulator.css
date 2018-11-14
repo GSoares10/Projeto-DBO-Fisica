@@ -54,7 +54,7 @@ label {
     margin: 4px 2px;
 }
 
-button {
+.style-input {
     background-color: #333;;
     color: white;
     padding: 2px 4px;
@@ -66,13 +66,13 @@ button {
     cursor: pointer;
 }
 
-button {
+.style-input {
     background-color: white; 
     color: black; 
     border: 2px solid #333;
 }
 
-button:hover {
+.style-input:hover {
     background-color: #333;
     color: white;
 }

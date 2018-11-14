@@ -83,8 +83,6 @@ button:hover {
 }
 
 .footer-style {
-    bottom: 0%;
-    position: fixed;
     display: flex;
     flex-direction: column;
     clear: both;
