@@ -64,7 +64,7 @@ let principal = function() {
 
         document.addEventListener('keyup', function(e) {
             e.preventDefault();
-            if (e.keyCode === 32) {
+            if (e.keyCode === 38) {
                 bloco.velocidade = -20;
             }
         }, false);
