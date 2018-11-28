@@ -1,97 +1,107 @@
-const form = document.querySelector('.formNumero');
-const gravidade = document.querySelector('.gravidade');
-const altura0 = document.querySelector('.altura0');
-
-form.addEventListener('submit', function(e) {
-    e.preventDefault();
-    let dados = gravidade.value;
-    return console.dir(dados);
-});
-
-
 let frame;
-let Largura;
-let Altura;
+let width;
+let height;
 let ctx;
 let canvas;
 
-let chao = {
+const floor = {
     y: 450,
-    altura: 150,
-    cor: 'black',
-    desenhar: function() {
-        ctx.fillStyle = this.cor;
-        ctx.fillRect(0, this.y, Largura, this.altura);
-    }  
-}
-    bloco = {
+    height: 150,
+    color: 'black',
+    draw: function() {
+        ctx.fillStyle = floor.color;
+        ctx.fillRect(0, floor.y, width, floor.height);
+    },
+};
+
+const cube = {
     x: 280,
     y: 0,
-    altura: 40,
-    largura: 40,
-    cor: 'gray',
-    gravidade: 2,
-    velocidade: 0,
-    atualizar: function() {
-        this.velocidade += this.gravidade;
-        this.y += this.velocidade;
+    width: 40,
+    height: 40,
+    color: 'gray',
+    gravity: 10,
+    velocity: 0,
+    update: function() {
+        cube.velocity += cube.gravity;
+        cube.y += cube.velocity;
 
-        if (this.y > chao.y - this.altura) {
-            this.y = chao.y - this.altura;
+        if (cube.y > floor.y - cube.height) {
+            cube.y = floor.y - cube.height;
         }
     },
-    desenhar: function() {
-        ctx.fillStyle = this.cor;
-        ctx.fillRect(this.x, this.y, this.largura, this.altura);
-
+    draw: function() {
+        ctx.fillStyle = cube.color;
+        ctx.fillRect(cube.x, cube.y, cube.width, cube.height);
     }
+};
 
-}
+const form = document.querySelector('.formNumber');
+const gravity = document.querySelector('.gravity');
+const time = document.querySelector('.time');
 
-let principal = function() {
-    Largura = window.innerHeight;
-    Altura = window.innerWidth;
+form.addEventListener('submit', function(e) {
+    e.preventDefault();
 
-    if (Largura >= 500) {
-        Largura = 600;
-        Altura = 600;
+    const g = gravity.value; // gravity
+    const t = time.value; // time
+
+    const s = (g*Math.pow(t, 2))/2;
+
+    const output = document.createElement('ouput');
+    document.querySelector('.result').appendChild(output);
+    // let dados = gravity.value;
+
+    // return console.dir(dados);
+    // cube.velocity = gravity.value;
+    // cube.update();
+    // return console.dir();
+});
+
+const createCanvas = function() {
+    width = window.innerWidth;
+    height = window.innerHeight;
+
+    if (width >= 500) {
+        width = 600;
+        height = 600;
 
         canvas = document.createElement('canvas');
-        canvas.width = Largura;
-        canvas.height = Altura;
+        canvas.width = width;
+        canvas.height = height;
         ctx = canvas.getContext('2d');
         document.querySelector('div.align-canvas').appendChild(canvas);
 
         document.addEventListener('keyup', function(e) {
             e.preventDefault();
             if (e.keyCode === 38) {
-                bloco.velocidade = -20;
+                cube.velocity = -20;
             }
         }, false);
 
-        roda();
+        run();
     }
 
 
-function roda() {
-    atualizar();
-    desenhar();
+    function run() {
+        update();
+        draw();
 
-    window.requestAnimationFrame(roda);
-}
+        window.requestAnimationFrame(run);
+    }
 
-function atualizar() {
-    frame++;
-    bloco.atualizar();
-}
+    function update() {
+        frame++;
+        cube.update();
+    }
 
-function desenhar() {
-    ctx.fillStyle = 'cyan';
-    ctx.fillRect(0, 0, Largura, Altura);
-    chao.desenhar();
-    bloco.desenhar();
-}
-}
+    function draw() {
+        ctx.fillStyle = 'cyan';
+        ctx.fillRect(0, 0, width, height);
+        floor.draw();
+        cube.draw();
+    }
+};
 
-principal();
+createCanvas();
 

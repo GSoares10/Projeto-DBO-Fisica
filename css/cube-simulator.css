@@ -133,6 +133,10 @@ div.align-dropdown {
     color: white;
 }
 
+.result {
+    right: 50px;
+}
+
 .footer-style {
     display: flex;
     flex-direction: column;

@@ -1,0 +1,10 @@
+Objetos	Distância média do Sol
+
+Mercúrio	57 900 000 km
+Vênus	108 200 000 km
+Terra	149 600 000 km
+Marte	227 900 000 km
+Jupiter	778 410 000 km
+Saturno	1 427 000 000 km
+Urano	2 870 000 000 km
+Netuno	4 496 000 000 km
