@@ -1,4 +1,3 @@
-let frame;
 let width;
 let height;
 let ctx;
@@ -37,28 +36,25 @@ const cube = {
 };
 
 const form = document.querySelector('.formNumber');
-const gravity = document.querySelector('.gravity');
+const inputGravity = document.querySelector('.gravity');
 const time = document.querySelector('.time');
 
 form.addEventListener('submit', function(e) {
     e.preventDefault();
 
-    const g = gravity.value; // gravity
-    const t = time.value; // time
-
-    const s = (g*Math.pow(t, 2))/2;
-
+    cube.gravity = inputGravity.value; // gravity
+    if (cube.gravity === inputGravity.value) {
+        cube.update();
+    }
+    const t = time.value;
+    const s = (cube.gravity*Math.pow(t, 2))/2;
+    console.log(s);
     const output = document.createElement('ouput');
     document.querySelector('.result').appendChild(output);
-    // let dados = gravity.value;
-
-    // return console.dir(dados);
-    // cube.velocity = gravity.value;
-    // cube.update();
-    // return console.dir();
 });
 
 const createCanvas = function() {
+    let frame;
     width = window.innerWidth;
     height = window.innerHeight;
 
@@ -81,20 +77,18 @@ const createCanvas = function() {
 
         run();
     }
-
-
     function run() {
         update();
         draw();
 
         window.requestAnimationFrame(run);
     }
-
     function update() {
-        frame++;
-        cube.update();
+        if (frame >= 0) {
+            frame++;
+            cube.update();
+        }
     }
-
     function draw() {
         ctx.fillStyle = 'cyan';
         ctx.fillRect(0, 0, width, height);
@@ -102,6 +96,4 @@ const createCanvas = function() {
         cube.draw();
     }
 };
-
 createCanvas();
-
