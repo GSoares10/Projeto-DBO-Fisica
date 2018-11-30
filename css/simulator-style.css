@@ -35,18 +35,16 @@ html, body {
 }
 
 div.contents > * {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-}
-
-div.contents > * {
     padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    margin: 0px 150px 0px 150px;
 }
 
-div.align-simulators > div > button {
-    justify-content: space-between;
-    text-align: justify;
+a, label{
+    margin-bottom: 5px;
+    display: flex;
+    flex-direction: column;
 }
 
 h1{
@@ -83,6 +81,8 @@ button:hover {
 }
 
 .footer-style {
+    bottom: 0%;
+    position: fixed;
     display: flex;
     flex-direction: column;
     clear: both;
