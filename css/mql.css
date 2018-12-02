@@ -133,8 +133,11 @@ div.align-dropdown {
     color: white;
 }
 
-.result {
-    right: 50px;
+div.result {
+    display: flex;
+    flex-direction: column;
+    margin: 10px 10px 10px 10px;
+    font-weight: bold;
 }
 
 .footer-style {
