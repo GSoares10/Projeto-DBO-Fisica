@@ -1,3 +1,5 @@
+import {inputGravity} from './calcy-mql.js';
+
 let width;
 let height;
 let ctx;
@@ -13,13 +15,13 @@ const floor = {
     },
 };
 
-const cube = {
+export const cube = {
     x: 280,
     y: 0,
     width: 40,
     height: 40,
     color: 'gray',
-    gravity: 10,
+    gravity: 0,
     velocity: 0,
     update: function() {
         cube.velocity += cube.gravity;
@@ -34,24 +36,6 @@ const cube = {
         ctx.fillRect(cube.x, cube.y, cube.width, cube.height);
     }
 };
-
-const form = document.querySelector('.formNumber');
-const inputGravity = document.querySelector('.gravity');
-const time = document.querySelector('.time');
-
-form.addEventListener('submit', function(e) {
-    e.preventDefault();
-
-    cube.gravity = inputGravity.value; // gravity
-    if (cube.gravity === inputGravity.value) {
-        cube.update();
-    }
-    const t = time.value;
-    const s = (cube.gravity*Math.pow(t, 2))/2;
-    console.log(s);
-    const output = document.createElement('ouput');
-    document.querySelector('.result').appendChild(output);
-});
 
 const createCanvas = function() {
     let frame;
@@ -84,8 +68,8 @@ const createCanvas = function() {
         window.requestAnimationFrame(run);
     }
     function update() {
-        if (frame >= 0) {
-            frame++;
+        if (cube.gravity === inputGravity.value) {
+            frame = frame++;
             cube.update();
         }
     }
