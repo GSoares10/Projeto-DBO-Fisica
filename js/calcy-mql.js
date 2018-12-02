@@ -1,6 +1,6 @@
 import {cube} from './mql.js';
 
-export const inputGravity = document.querySelector('.gravity');
+export const inputGravity = document.querySelector('.gravity'); 
 const form = document.querySelector('.formNumber');
 const time = document.querySelector('.time');
 

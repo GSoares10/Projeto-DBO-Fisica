@@ -51,15 +51,7 @@ const createCanvas = function() {
         canvas.height = height;
         ctx = canvas.getContext('2d');
         document.querySelector('div.align-canvas').appendChild(canvas);
-
-        document.addEventListener('keyup', function(e) {
-            e.preventDefault();
-            if (e.keyCode === 38) {
-                cube.velocity = -20;
-            }
-        }, false);
-
-        run();
+            run();
     }
     function run() {
         update();
@@ -68,10 +60,8 @@ const createCanvas = function() {
         window.requestAnimationFrame(run);
     }
     function update() {
-        if (cube.gravity === inputGravity.value) {
-            frame = frame++;
-            cube.update();
-        }
+        frame++;
+        cube.update();
     }
     function draw() {
         ctx.fillStyle = 'cyan';
