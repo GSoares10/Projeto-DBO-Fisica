@@ -1,0 +1,80 @@
+html {
+    background-image: url('/photos/space.png');
+}
+button {
+    background-color: #333;;
+    border: none;
+    color: white;
+    padding: 10px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: white; 
+    color: black; 
+    border: 2px solid #333;
+}
+button {
+    background-color: #333;
+    color: white;
+}
+.contents{
+    margin: 10px 0px 0px 10px;
+    margin-left: 150px;
+
+}
+.top {
+    width: 340px;
+    height: 227;
+}
+.demo-1 {
+    position:relative;
+    width: 300px; 
+    height: 200px;
+    overflow: hidden;
+    float: left;
+    margin-right: 20px;
+}
+.demo-1 p,.demo-1 h2 {
+    color:#fff;
+    padding:10px;
+    left:-20px;
+    top:20px;
+    position:relative
+}
+.demo-1 p {
+    font-family:'Lato';
+    font-size:12px;
+    line-height:12px;
+    margin:0
+}
+.demo-1 h1 {
+    font-family:'Lato';
+    font-size:20px;
+    line-height:24px;
+    margin:0;
+}
+.effect img {
+    position:absolute;
+    margin:-15px 0;
+    right:0;
+    top:0;
+    cursor:pointer;
+    -webkit-transition:top .4s ease-in-out,right .4s ease-in-out;
+    -moz-transition:top .4s ease-in-out,right .4s ease-in-out;
+    -o-transition:top .4s ease-in-out,right .4s ease-in-out;
+    transition:top .4s ease-in-out,right .4s ease-in-out
+}
+.effect img.top:hover {
+    top:-230px;
+    right:-330px;
+    padding-bottom:200px;
+    padding-left:300px
+}
